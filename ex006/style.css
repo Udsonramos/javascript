@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 10px;
+    background-color: lightgrey;
+}
+
+main {
+    width: 300px;
+    height: 250px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.021);
+    margin: 30% auto;
+}
+
+form  {
+    padding: 60px 0 0 0;
+    margin: auto;
+}
+
+p {
+    padding: 10px;
+    text-align: center;
+}
+
+.usuario {
+    background-color: rgba(0, 0, 255, 0.062);
+    border-radius: 3px;
+    border: 1.5px solid blue;
+    padding: 1px;
+}
+
+.senha {
+    background-color: rgba(0, 0, 255, 0.062);
+    border-radius: 3px;
+    border: 1.5px solid blue;
+    padding: 1px;
+}
+
+#ibotao {
+    color: white;
+    background-color: blue;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+}
+
+#ibotao:hover {
+    background-color: darkblue;
+}

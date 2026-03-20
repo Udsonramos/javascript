@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form">
+        <input type="text" name="nome" id="nome" placeholder="nome">
+        <button type="submit" id="button">Enviar</button>
+        <p id="mensagem"></p>
+    </form>
+    <script>
+        const form = document.querySelector("#form");
+        const nome = document.querySelector("#nome");
+        const mensagem = document.querySelector("#mensagem");
+
+        form.addEventListener("submit", (event) => {
+            event.preventDefault()
+
+            if (nome.value === "") {
+                nome.placeholder = "Preencha seu nome!";
+                mensagem.textContent = "";
+            } else {
+                mensagem.textContent = `Bem-vindo, ${nome.value}`;
+            }
+        })
+    </script>
+</body>
+</html>
