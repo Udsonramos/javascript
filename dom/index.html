@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: aquamarine;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em Javascript.</p>
+    <div>Clique em mim</div>
+    <script>
+        var p1 = window.document.getElementById('p')[0]
+        window.document.write('Está escrito assim: ' + p1.innerText)
+    </script>
+</body>
+</html>
+
+<!--
+    DOM
+
+    document object model
+    é um conjunto de objetos do navegador que dão acesso a parte interna do site.
+
+    window é uma janela onde está a árvore DOM
+    
+    Selecionando através do DOM:
+
+    - por marca(tags): getElementsByTagName()
+    - usando [] conseguimos escolher qual tag iremos marcar, caso haja mais de uma delas no HTML. Precisa ser selecionado por número e o primeiro na verdade começa pelo "0".
+
+    - por id: getElementById()
+
+    - por nome: getElementByName()
+
+    - por classe: getElementByClass
+
+    - por seletor: querySelector()
+
+-->
