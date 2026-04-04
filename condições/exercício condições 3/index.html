@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Autorização</h1>
+    </header>
+    <main id="main">
+        <form action="" method="post" autocomplete="off">
+            <fieldset>
+                <label for="iidade">Idade:</label>
+                <input type="number" name="idade" id="iidade" maxlength="2" placeholder="18">
+            </fieldset>
+            <fieldset>
+                <legend>Autorização dos pais</legend>
+                <label for="isim">Sim</label><input type="radio" name="auto" id="isim">
+                <label for="inao">Não</label><input type="radio" name="auto" id="inao">
+            </fieldset>
+            <div>
+                <input type="button" value="Verificar" id="botao" onclick="clicar()">
+            </div>
+        </form>
+        <p id="resposta"></p>
+        <div id="imagem"></div>
+    </main>
+    <footer>
+        <p><em>Exercício</em></p>
+    </footer>
+    <script>
+        var botao = document.querySelector('#botao')
+        function clicar() {
+        var formidade = document.querySelector('#iidade')
+        var idade = Number(formidade.value)
+        var main = document.querySelector('#main')
+        var auto = document.getElementsByName('auto')[0]
+        var res = document.querySelector('#resposta')
+        var imagem = document.querySelector('#imagem')
+        var img = document.createElement('img')
+        img.setAttribute('id','foto')
+        imagem.innerHTML = ''
+
+            if (idade >= 18) {
+                res.innerHTML = 'Autorizado!'
+                img.setAttribute('src', 'jovem-18.png')
+                
+            } else if (idade < 18 && auto.checked) {
+                res.innerHTML = 'Autorizado pelos pais!'
+                img.setAttribute('src', 'jovem-pais.png')
+                } else {
+                res.innerHTML = 'Você não está autorizado!'
+                img.setAttribute('src', 'seguranca.png')
+            }
+        
+        imagem.appendChild(img)
+        res.style.textAlign = 'center'
+        imagem.style.textAlign = 'center'
+        main.style.height = '500px'
+        
+        }
+    </script>
+</body>
+</html>
