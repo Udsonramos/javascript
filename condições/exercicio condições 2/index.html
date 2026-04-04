@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: aqua;
+        }
+
+        header h1 {
+            text-align: center;
+        }
+
+        main #form {
+            text-align: left;
+        }
+
+        main {
+            width: 450px;
+            height: 450px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 20PX;
+            margin: auto;
+            text-align: center;
+            
+        }
+
+        img {
+            text-align: center;
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        #menino {
+            text-align: center;
+            display: none;
+            margin: auto;
+        }
+
+        #menina {
+            display: none;
+            margin: auto;
+        }
+
+        #homem {
+            display: none;
+            margin: auto;
+        }
+
+        #mulher {
+            display: none;
+            margin: auto;
+        }
+
+        #idoso {
+            display: none;
+            margin: auto;
+        }
+
+        #idosa {
+            display: none;
+            margin: auto;
+        }
+
+        footer p {
+            text-align: center;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+    <main>
+        <div id="form">
+            <p>
+                <label for="nascimento">Ano de Nascimento:</label>
+                <input type="number" name="nascimento" id="nascimento">
+            </p>
+            <p>
+                <label for="">Sexo:</label>
+                <input type="radio" name="masc" id="masc"><label for="masc">Masculino</label>
+                <input type="radio" name="fem" id="fem"><label for="fem">Feminino</label>
+            </p>
+            <p>
+                <input type="button" value="verificar" onclick="clicar()">
+            </p>
+        </div>
+        <div id="resultado">
+            <p id="msg"></p>
+            <img src="midia/homem.jpg" id="homem" alt="homem">
+            <img src="midia/idosa.jpg" id="idosa" alt="idosa">
+            <img src="midia/idoso.jpg" id="idoso" alt="idoso">
+            <img src="midia/menina.jpg" id="menina" alt="menina">
+            <img src="midia/menino.jpg" id="menino" alt="menino">
+            <img src="midia/mulher.jpg" id="mulher" alt="mulher">
+        </div>
+    </main>
+    <footer>
+        <p id="rodape"><em>Exercício</em></p>
+    </footer>
+    <script>
+        function clicar() {
+            var nascimento = document.querySelector('#nascimento')
+            var ano = Number(nascimento.value)
+            var idade = 2026 - ano
+
+            var masc = document.querySelector('#masc')
+            var fem = document.querySelector('#fem')
+            var botao = document.querySelector('#verificar')
+
+            let menino = document.querySelector('#menino')
+            let menina = document.querySelector('#menina')
+            let mensagem = document.querySelector('#msg')
+
+            if (idade < 18 && masc) {
+                mensagem.innerHTML = `Você é um menino de ${idade} anos.`
+                menino.style.display = 'block'
+            } else if (idade < 18 && fem)
+                mensagem.innerHTML = `Você é uma menina de ${idade} anos.`
+                menina.style.display = 'block'
+                menino.style.display = 'none'
+        }
+    </script>
+</body>
+</html>
