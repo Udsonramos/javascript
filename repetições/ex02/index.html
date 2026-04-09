@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(119, 119, 247);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header h1 {
+            text-align: center;
+            color: white;
+        }
+
+        main {
+            width: 500px;
+            height: auto;
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+            margin: auto;
+        }
+
+        footer p {
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tabuada</h1>
+    </header>
+    <main>
+        <form action="">
+            <p>
+                <label for="itabuada">Inserir número:</label>
+                <input type="number" name="numero" id="inumero">
+                <input type="button" value="Gerar" onclick="calcular()">
+            </p>
+            <p>
+                <select name="tabuada" id="itabuada">
+                    <option value="titulo">Escolha o número acima</option>
+                </select>
+            </p>
+        </form>
+    </main>
+    <footer>
+        <p><em>Exercício</em></p>
+    </footer>
+    <script>
+        var numero = document.querySelector('#inumero')
+        var tabuada = document.querySelector('#itabuada')
+        function calcular() {
+            tabuada.innerHTML = ''
+
+            if (numero.value.length == 0) {
+                window.alert('Campo vazio!')
+            } else {
+                let n = Number(numero.value)
+                for(var c = 1;c <= 10;c++) {
+                    let item = document.createElement('option')
+                    item.text = `${n} x ${c} = ${n*c}`
+                    item.value = `tabuada${n}`
+                    tabuada.appendChild(item)
+                }
+            }
+        }
+    </script>
+</body>
+</html>
