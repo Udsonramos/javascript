@@ -19,9 +19,9 @@ for(let c = 0;c < nume.length;c++) {
 
 
 
-for(let c in num) { // Aqui usamos o for de forma mais simples e com a mesma eficiência que o outro, trazendo mesmo resultado.
-    console.log(num[c]) 
+for(let c in nume) { // Aqui usamos o for de forma mais simples e com a mesma eficiência que o outro, trazendo mesmo resultado.
+    console.log(nume[c]) 
 }
 
 
-console.log(num.indexOf(1)) // .indexOf() localiza em qual posição o elemento inserido no () está
+console.log(nume.indexOf(1)) // .indexOf() localiza em qual posição o elemento inserido no () está
