@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: rgb(102, 102, 225);
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+        }
+
+        main {
+            width: 500px;
+            height: auto;
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+            margin: auto;
+        }
+
+        select {
+            width: 100px;
+            height: 100px;
+        }
+
+        footer p {
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Analisador de números</h1>
+    </header>
+    <main>
+        <form action="">
+            <p>
+                <label for="inumero">Número (entre 1 a 100):</label>
+                <input type="number" name="numero" id="inumero">
+                <input type="button" value="Adicionar" id="btadd" onclick="adicionar()">
+            </p>
+            <p>
+                <select name="lista" id="ilista">
+
+                </select> <br>
+                <input type="button" value="Finalizar" id="ires" onclick="finalizar()">
+        </form>
+        <div id="res"></div>
+    </main>
+    <footer>
+        <p>Exercício</p>
+    </footer>
+    <script src="script.js">
+        
+    </script>
+</body>
+</html>

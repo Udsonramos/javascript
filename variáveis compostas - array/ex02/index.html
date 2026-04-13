@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Adicionando valores</h1>
+    <form action="">
+        <p>
+            <label for="inumero">Adicione o número</label>
+            <input type="number" name="numero" id="inumero">
+            <input type="button" value="Enviar" onclick="clicar()">
+        </p>
+    </form>
+    <div id="res"></div>
+    <script>
+        let num = document.querySelector('#inumero')
+        let res = document.querySelector('#res')
+        let valores = []
+
+        function clicar() {
+            if (Number(num.value) == 0) {
+                window.alert('Preencha um número!')
+            } else {
+                valores.push(Number(num.value))
+                let soma = 0
+                res.innerHTML = ''
+
+                for(let pos in valores) {
+                    res.innerHTML += `<p>Valor ${valores[pos]} adicionado.</p>`
+                    soma += valores[pos]
+                }
+                res.innerHTML += `Totalizando ${valores.length} números.`
+                res.innerHTML += `<p>A soma dos valores é ${soma}</p>`
+            }
+        }
+    </script>
+</body>
+</html>
