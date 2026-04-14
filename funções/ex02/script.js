@@ -69,7 +69,7 @@ adicionar(5)
 console.log(lista)
 finalizar()*/
 
-let boletim = []
+/*let boletim = []
 
 function notaValida(n) {
     if(n >= 0 && n <= 10) {
@@ -119,4 +119,22 @@ cadastrarNota(10)
 cadastrarNota(10)
 calcularMedia()
 gerarRelatorio()
+*/
 
+function transformar(celsius) {
+    let conversao = (celsius - 32) / 1.8
+    return conversao
+}
+
+function previsao(f) {
+    let converter = transformar(f)
+    
+    if (converter > 25) {
+        console.log(`Está calor: ${converter.toFixed(1)}°C.`)
+    } else {
+        console.log(`Está fresco: ${converter.toFixed(1)}°C.`)
+    }
+    return converter
+}
+
+let temperatura = previsao(50)
