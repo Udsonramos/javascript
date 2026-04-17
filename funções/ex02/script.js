@@ -137,4 +137,4 @@ function previsao(f) {
     return converter
 }
 
-let temperatura = previsao(50)
+let temperatura = previsao(10)
