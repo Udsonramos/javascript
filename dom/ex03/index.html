@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+        }
+
+        section {
+            
+            text-align: center;
+            width: 300px;
+            height: 400px;
+            border: 2px solid black;
+            margin: 5px;
+        }
+
+        form {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        form p {
+            margin: 5px;
+        }
+
+        #caixacaixa {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .input {
+            cursor: pointer;
+        }
+
+        .botao {
+            color: white;
+            background-color: blue;
+            width: 150px;
+            padding: 5px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .curso {
+            display: flex;
+            justify-content: space-between;
+            background-color: lightgray;
+            border: 2px solid darkgrey;
+            width: 200px;
+            border-radius: 4px;
+            padding: 3px;
+            margin: 3px auto;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <section id="caixa1">
+            <form action="">
+                <p><label for="inome">Nome do curso</label></p>
+                <p><input type="text" name="nome" id="inome" placeholder="Nome do Curso"></p>
+                <p><input type="button" id="btnadd" class="botao" value="Adicionar"></p>
+                <p><input type="button" id="btnremove" class="botao" value="Remover Selecionado"></p>
+                <p><input type="button" id="btnselect" class="botao" value="Curso Selecionado"></p>
+            </form>
+        </section>
+        <section id="caixa2">
+            <div id="caixacaixa">
+                <div class="curso">
+                        HTML
+                        <input type="radio" name="select" class="input" id="ihtml">
+                </div>
+                <div class="curso">
+                    CSS
+                    <input type="radio" name="select" class="input" id="icss">
+                </div>
+                <div class="curso">
+                    Javascript
+                    <input type="radio" name="select" class="input" id="ijs">
+                </div>
+                <div class="curso">
+                    PHP
+                    <input type="radio" name="select" class="input" id="iphp">
+                </div>
+                <div class="curso">
+                    React
+                    <input type="radio" name="select" class="input" id="ireact">
+                </div>
+                <div class="curso">
+                    MySQL
+                    <input type="radio" name="select" class="input" id="imysql">
+                </div>
+                <div class="curso">
+                    ReactNative
+                    <input type="radio" name="select" class="input" id="ireactn">
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

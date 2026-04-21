@@ -2,9 +2,9 @@
     return n1*n2
 }
 
-let multi = multiplicacao(4, 3)
-console.log(multi)
-*/
+let multi = multiplicacao(10, 5)
+console.log(multi)*/
+
 
 /*function parimpar(n) {
     if (n%2 == 0) {
