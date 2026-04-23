@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+
+        .verde {
+            background-color: lightgreen;
+            padding: 5px;
+            border: 5px solid darkgreen;
+            border-radius: 4px;
+            margin: 5px;
+        }
+
+        .azul {
+            background-color: lightblue;
+            padding: 5px;
+            border: 5px solid darkblue;
+            border-radius: 4px;
+            margin: 5px;
+        }
+
+        label, input {
+            margin: 5px;
+            display: block;
+        }
+
+        #btnpesquisar {
+            background-color: blue;
+            color: white;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .vermelho {
+            background-color: lightcoral;
+            padding: 5px;
+            border: 5px solid darkred;
+            border-radius: 4px;
+            margin: 5px;
+        }
+
+        p {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <section class="verde">
+            <p>Array:</p>
+            <p id="array"></p>
+    </section>
+
+    <section class="azul">
+            <label for="ipreencher">Pesquisar por:</label>
+            <input type="number" name="preencher" id="ipreencher">
+            <input type="button" value="Pesquisar" id="btnpesquisar">
+    </section>
+
+    <section class="vermelho">
+        <p>Resultado:</p>
+        <p id="resultado"></p>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
