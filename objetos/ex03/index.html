@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    section {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 10PX;
+    }
+
+    #botaoadd {
+        width: 175px;
+        color: white;
+        background-color: darkgray;
+        border: none;
+        border-radius: 5px;
+        padding: 5px;
+    }
+</style>
+<body>
+    <section>
+        <label for="inome">Nome:</label><br>
+        <input type="text" name="nome" id="inome">
+    </section>
+    <section>
+        <label for="iidade">Idade:</label><br>
+        <input type="number" name="idade" id="iidade">
+    </section>
+    <section>
+        <input type="button" value="Adicionar" id="botaoadd">
+    </section>
+    <section id="resultado"></section>
+    <script src="script.js"></script>
+</body>
+</html>
