@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            margin: auto;
+            width: 100%;
+            height: 100%;
+        }
+
+        section {
+            
+            background-color: black;
+            width: 400px;
+            height: 600px;
+            margin: auto;
+        }
+
+        #calcprincipal {
+            text-align: end;
+        }
+
+        #calcnum {
+            display: grid;
+            columns: 4;
+        }
+    </style>
+</head>
+<body>
+    <section id="calculadora">
+        <div id="calcprincipal">
+            <div id="nome">
+                <p>Calculadora</p>
+            </div>
+            <div id="display"></div>
+        </div>
+
+        <div id="calcnum">
+            <div id="ac" class="teclacinza"></div>
+            <div id="maisoumenos" class="teclacinza"></div>
+            <div id="porcentagem" class="teclacinza"></div>
+            <div id="divisao" class="teclalaranja"></div>
+
+            <div id="t7" class="teclapreta">7</div>
+            <div id="t8" class="teclapreta">8</div>
+            <div id="t9" class="teclapreta">9</div>
+            <div id="multiplicacao" class="teclalaranja">x</div>
+
+            <div id="t4" class="teclapreta">4</div>
+            <div id="t5" class="teclapreta">5</div>
+            <div id="t6" class="teclapreta">6</div>
+            <div id="substracao" class="teclalaranja">-</div>
+
+            <div id="t1" class="teclapreta">1</div>
+            <div id="t2" class="teclapreta">2</div>
+            <div id="t3" class="teclapreta">3</div>
+            <div id="soma" class="teclalaranja">+</div>
+
+            <div id="naosei" class="teclapreta">n</div>
+            <div id="t0" class="teclapreta">0</div>
+            <div id="virgula" class="teclapreta">,</div>
+            <div id="igual" class="teclalaranja">=</div>
+        </div>
+    </section>
+</body>
+</html>
