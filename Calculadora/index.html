@@ -20,7 +20,7 @@
         }
 
         section {
-            
+            border-radius: 10px;
             background-color: black;
             width: 400px;
             height: 600px;
@@ -33,7 +33,40 @@
 
         #calcnum {
             display: grid;
-            columns: 4;
+            grid-template-columns: 4, 1fr;
+            gap: 10px;
+            padding: 10px;
+            margin: 10px 10px 10px 30px;
+        }
+
+        button {
+            border: none;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        .teclacinza {
+            background-color: rgb(70, 70, 70);
+        }
+
+        .teclapreta {
+            background-color: rgb(33, 33, 33);
+        }
+
+        .teclalaranja {
+            background-color: orangered;
+        }
+
+        #nome p {
+            font-size: 2rem;
+            padding: 10px 35px 10px 10px;
+        }
+        #display {
+            font-size: 2rem;
+            padding: 10px 35px 10px 10px;
         }
     </style>
 </head>
@@ -43,35 +76,46 @@
             <div id="nome">
                 <p>Calculadora</p>
             </div>
-            <div id="display"></div>
+            <div id="display">0</div>
         </div>
 
         <div id="calcnum">
-            <div id="ac" class="teclacinza"></div>
-            <div id="maisoumenos" class="teclacinza"></div>
-            <div id="porcentagem" class="teclacinza"></div>
-            <div id="divisao" class="teclalaranja"></div>
+            <div>
+                <button id="ac" class="teclacinza">AC</button>
+                <button id="copy" class="teclacinza">C</button>
+                <button id="porcentagem" class="teclacinza op">%</button>
+                <button id="divisao" class="teclalaranja op">÷</button>
+            </div>
 
-            <div id="t7" class="teclapreta">7</div>
-            <div id="t8" class="teclapreta">8</div>
-            <div id="t9" class="teclapreta">9</div>
-            <div id="multiplicacao" class="teclalaranja">x</div>
+            <div>
+                <button id="t7" class="teclapreta num">7</button>
+                <button id="t8" class="teclapreta num">8</button>
+                <button id="t9" class="teclapreta num">9</button>
+                <button id="multiplicacao" class="teclalaranja op">x</button>
+            </div>
 
-            <div id="t4" class="teclapreta">4</div>
-            <div id="t5" class="teclapreta">5</div>
-            <div id="t6" class="teclapreta">6</div>
-            <div id="substracao" class="teclalaranja">-</div>
+            <div>
+                <button id="t4" class="teclapreta num">4</button>
+                <button id="t5" class="teclapreta num">5</button>
+                <button id="t6" class="teclapreta num">6</button>
+                <button id="substracao" class="teclalaranja op">-</button>
+            </div>
 
-            <div id="t1" class="teclapreta">1</div>
-            <div id="t2" class="teclapreta">2</div>
-            <div id="t3" class="teclapreta">3</div>
-            <div id="soma" class="teclalaranja">+</div>
+            <div>
+                <button id="t1" class="teclapreta num">1</button>
+                <button id="t2" class="teclapreta num">2</button>
+                <button id="t3" class="teclapreta num">3</button>
+                <button id="soma" class="teclalaranja op">+</button>
+            </div>
 
-            <div id="naosei" class="teclapreta">n</div>
-            <div id="t0" class="teclapreta">0</div>
-            <div id="virgula" class="teclapreta">,</div>
-            <div id="igual" class="teclalaranja">=</div>
+            <div>
+                <button id="naosei" class="teclapreta">n</button>
+                <button id="t0" class="teclapreta num">0</button>
+                <button id="virgula" class="teclapreta num">,</button>
+                <button id="igual" class="teclalaranja">=</button>
+            </div>
         </div>
     </section>
+    <script src="script02.js"></script>
 </body>
 </html>
