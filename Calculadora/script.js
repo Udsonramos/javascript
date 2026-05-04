@@ -5,7 +5,7 @@ const limpar = document.querySelector('#ac')
 const res = document.querySelector("#igual")
 const copy = document.querySelector('#copy')
 
-let botaonum = [...num]
+let botaonum = [...num] //Pega cada div e joga nessa variável
 let botaoop = [...op]
 
 let sinal = false
